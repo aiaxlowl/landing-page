@@ -10,12 +10,14 @@
 
 * {
     font-family: Roboto;
+    box-sizing: border-box;     
     margin: 0;
 }
 
 body { 
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
 }
 
 /* Header */
@@ -35,6 +37,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     margin: 10px 30px;
     gap: 20px;  
 }
@@ -55,8 +58,10 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    flex-wrap: wrap;
+    gap: 70px;
     background-color: var(--background1);
+    padding-bottom: 3em;
 }
 
 .header-content {
@@ -97,9 +102,11 @@ a {
 }
 
 .dust-sablay {
-    width: 385px;
-    height: 370px;
-    padding: 20px;
+    width: 100%;
+    max-width: 385px;
+    height: auto;
+    flex-shrink: 1;
+    /* padding: 20px; */
 }
 
 /* Section 2 */
@@ -109,10 +116,10 @@ a {
     gap: 20px;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 15px;
+    margin-bottom: 3em;
 }
 
-h1 {
+.section-2 h1 {
     font-size: 50px;
     margin: 20px;
     font-weight: 900;
@@ -123,13 +130,14 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: baseline;
+    flex-wrap: wrap;
     gap: 50px;
 }
 
 .img-txt-container {
     display: flex;
     flex-direction: column;
-    width: 230px;
+    width: 240px;
     gap: 15px;
     text-align: center;
 }
@@ -141,7 +149,7 @@ h1 {
 
 .img-txt-container img {
     width: 230px;
-    height: 200px;
+    height: 210px;
     border-radius: 15px;
 }
 
@@ -151,17 +159,18 @@ h1 {
     justify-content: center;
     align-items: center;
     background-color: #e5e7eb;
-    padding: 30px;
 }
 
 .section-3-container {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    max-width: 900px;
+    gap: 30px;
+    margin: 5em;
 }
 
 .section-3-container h1 {
-    text-align: justify;
     font-size: 36px;
     font-style: italic;
     font-weight: 300;
@@ -172,3 +181,41 @@ h1 {
     align-self: center;
 }
 
+/* Section 4 */
+.section-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-4-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    padding: 3em;
+    margin: 4em;
+    gap: 40px;
+    color: var(--font-color);
+    background-color: #3882f6;
+}
+
+.section-4-container button {
+    background-color: transparent;
+    font-size: 16px;
+    border: 2px var(--font-color) solid;
+    color: var(--font-color);
+    padding: 5px 25px;
+    border-radius: 10px;
+}
+
+
+/* Footer */
+.footer {
+    background-color: var(--background1);
+    color: var(--font-color);
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+}
